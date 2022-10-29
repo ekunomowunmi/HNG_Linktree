@@ -20,12 +20,11 @@
 }
 .Link-body:hover{
   background: #D0D5DD;
-  font-weight: bold;
 }
 
 a.button-link{
 color: #101828;
-font-weight: 500;
+font-weight: bold;
 text-decoration: none;
 }
 
@@ -41,7 +40,7 @@ a.button-link:visited {
 /* mouse over link */
 a.button-link:hover {
   color: #424449;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* selected link */
@@ -55,13 +54,13 @@ a.button-link:active {
 /* Auto layout */
 
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 1rem;
 margin:1rem;
 width: 94%;
-height: 4rem;
+height: 6rem;
 
 /* Gray/200 */
 
@@ -78,12 +77,74 @@ order: 0;
 flex-grow: 1; */
 }
 
+.subText{
+  color: #424449;
+}
 
+.small-margin{
+  margin: 1rem;
+}
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back{
+position:absolute;
+margin-left: 26rem;
+display: inline;
+}
+
+.mobile-back{
+  display: none;
+}
+
+.footer{
+  display: flex;
+  padding: 1rem;
+  justify-content: space-around;
+  color: #667085;
+  font-size: small;
+  border-top: 1px solid #eee;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+@media screen and ( max-width: 575px) {
+  .back{
+    display: none;
+  }
+
+  .mobile-back{
+    display: inline;
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+
+  .footer-image{
+    width: 6rem;
+  }
+
+  .footer-text{
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  .footer{
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+   
+    border-top: 1px solid #667085;
+  }
+  
 }
 
 .App-header {

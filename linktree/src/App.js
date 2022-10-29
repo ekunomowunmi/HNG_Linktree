@@ -1,11 +1,18 @@
 import picture from './picture.svg';
+import slack from './slack.svg';
+import github from './github.svg';
+import back from './back.svg';
+import mobileIcon from './mobile_icon.svg';
+import ingressive from './ingressive.svg';
+import zuriLogo from './zuri_logo.svg';
+
 import './App.css';
 
 function Links(props){
   return (
 <button id={props.id} className="Link-body">
-  <a className="button-link" href={props.url}>{props.name}</a>
-  <p className="d-block">{props.subText ? props.subText : null}</p>
+  <a className="button-link " href={props.url}>{props.name}</a>
+ {props.subText ? <p className="d-block subText">{props.subText}</p>:null} 
 </button>
   )
 }
@@ -16,7 +23,7 @@ function App() {
   let profileLinks = [
     {
       id:"btn_twitter",
-      name:"Twitter",
+      name:"Twitter Link",
       url:"https://twitter.com/OmowunmiEkun1",
       subText:null
     },
@@ -54,13 +61,27 @@ function App() {
 
   return (
     <div className="App">
-      <img id="profile_img" src={picture} alt="logo"/>
+      <div>
+         <img id="profile_img" src={picture} alt="logo"/>
+         <img id="back" className="back" src={back} alt="back"/>
+         <img id="mobileIcon" className="mobile-back" src={mobileIcon} alt="icon"/>
       <p id="twitter" className="bold">{twitterUserName}</p>
       <p id="slack" className="no-visibility">Omowunmi ekun</p>
+      </div>
+     
       {profileLinks.map(profileLink => {
        return <Links key={profileLink.id} id={profileLink.id} name={profileLink.name} 
         url={profileLink.url} subText={profileLink.subText} />
       })}
+      <div className="social-icons">
+        <img className="small-margin" id="slack_icon" src={slack} alt="slack"/>
+        <img className="small-margin" id="github_icon" src={github} alt="git"/>
+      </div>
+      <div className="footer">
+      <img className="small-margin footer-image" id="zuri_icon" src={zuriLogo} alt="slack"/>
+      <p className="footer-text">HNG Internship 9 Frontend Task</p>
+        <img className="small-margin footer-image" id="ingressive_icon" src={ingressive} alt="git"/>
+      </div>
     </div>
   );
 }

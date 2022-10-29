@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c35cec1b.css",
+    "main.js": "/static/js/main.8a2107b9.js",
+    "static/js/787.55f350d7.chunk.js": "/static/js/787.55f350d7.chunk.js",
+    "static/media/ingressive.svg": "/static/media/ingressive.7a5414ca7d8a0dce368862d7e3a9c4d1.svg",
+    "static/media/picture.svg": "/static/media/picture.6624715b53be78d5eb8f25d6d26b9813.svg",
+    "static/media/zuri_logo.svg": "/static/media/zuri_logo.8e58182c6bdd33a20aa645923ebbb1ea.svg",
+    "static/media/slack.svg": "/static/media/slack.8d1c3d774c173d1ec391982023ef91dc.svg",
+    "static/media/github.svg": "/static/media/github.2fd84e34c3c3947d7e4ade85fd4dcbb5.svg",
+    "static/media/mobile_icon.svg": "/static/media/mobile_icon.40d68c5399810635dbf192237251dbd3.svg",
+    "static/media/back.svg": "/static/media/back.43483b020f71077ddd13374a41b196ca.svg",
+    "index.html": "/index.html",
+    "main.c35cec1b.css.map": "/static/css/main.c35cec1b.css.map",
+    "main.8a2107b9.js.map": "/static/js/main.8a2107b9.js.map",
+    "787.55f350d7.chunk.js.map": "/static/js/787.55f350d7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c35cec1b.css",
+    "static/js/main.8a2107b9.js"
+  ]
+}

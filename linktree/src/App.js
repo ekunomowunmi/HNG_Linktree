@@ -1,14 +1,16 @@
-import picture from './picture.svg';
-import slack from './slack.svg';
-import github from './github.svg';
-import back from './back.svg';
-import mobileIcon from './mobile_icon.svg';
-import ingressive from './ingressive.svg';
-import zuriLogo from './zuri_logo.svg';
-
+import React , {Fragment} from "react";
 import './App.css';
+import HomePage from "./components/HomePage";
 
-function Links(props){
+import { BrowserRouter as Router, Route, Link, Switch, Routes } from "react-router-dom";
+import picture from './assets/picture.svg';
+
+import back from './assets/back.svg';
+import mobileIcon from './assets/mobile_icon.svg';
+
+import Footer from "./components/Footer";
+
+function BookLinks(props){
   return (
 <button id={props.id} className="Link-body">
   <a className="button-link " href={props.url}>{props.name}</a>
@@ -17,9 +19,28 @@ function Links(props){
   )
 }
 
-function App() {
-  const twitterUserName = 'OmowunmiEkun1';
+function LinkToPage(props){
+  return (
+    <Link to={props.url}>
+       <button id={props.id} className="Link-body">
+      <span className="button-link">{props.name}</span>
+     {props.subText ? <p className="d-block subText">{props.subText}</p>:null} 
+    </button>
+    </Link>
+   
+      )
+}
 
+export default function App() {
+  const twitterUserName = 'OmowunmiEkun1';
+  let routerLinks = [
+    {
+      id:"contact",
+      name:"Contact",
+      url:"/contact",
+      subText: "The design offered by this team will blow your mind, It is absolutely wonderful"
+    }
+  ]
   let profileLinks = [
     {
       id:"btn_twitter",
@@ -60,7 +81,8 @@ function App() {
   ]
 
   return (
-    <div className="App">
+
+     <div className="App">
       <div>
          <img id="profile_img" src={picture} alt="logo"/>
          <img id="back" className="back" src={back} alt="back"/>
@@ -70,10 +92,15 @@ function App() {
       </div>
      
       {profileLinks.map(profileLink => {
-       return <Links key={profileLink.id} id={profileLink.id} name={profileLink.name} 
+       return <BookLinks key={profileLink.id} id={profileLink.id} name={profileLink.name} 
         url={profileLink.url} subText={profileLink.subText} />
       })}
-      <div className="social-icons">
+      {routerLinks.map(routerLink => {
+        return <LinkToPage key={routerLink.id} id={routerLink.id} name={routerLink.name}
+        url={routerLink.url} subText={routerLink.subText} />
+      })}
+      <Footer/>
+      {/* <div className="social-icons">
         <img className="small-margin" id="slack_icon" src={slack} alt="slack"/>
         <img className="small-margin" id="github_icon" src={github} alt="git"/>
       </div>
@@ -81,9 +108,8 @@ function App() {
       <img className="small-margin footer-image" id="zuri_icon" src={zuriLogo} alt="slack"/>
       <p className="footer-text">HNG Internship 9 Frontend Task</p>
         <img className="small-margin footer-image" id="ingressive_icon" src={ingressive} alt="git"/>
-      </div>
+      </div> */}
     </div>
-  );
-}
 
-export default App;
+   );
+}

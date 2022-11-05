@@ -79,8 +79,9 @@ function Contact (){
             Send Message
           </button>
         </form>
+         <Footer/>
     </div>
-    <Footer/>
+   
     </div>
     )
 }

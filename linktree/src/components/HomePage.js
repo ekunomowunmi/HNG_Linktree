@@ -17,9 +17,9 @@ function BookLinks(props){
 
 function LinkToPage(props){
   return (
-    <Link to={props.url}>
+    <Link className='button-link' to={props.url}>
        <button id={props.id} className="Link-body">
-      <span className="button-link">{props.name}</span>
+      <span className="bold">{props.name}</span>
      {props.subText ? <p className="d-block subText">{props.subText}</p>:null} 
     </button>
     </Link>
